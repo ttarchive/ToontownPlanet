@@ -1,0 +1,84 @@
+
+<head>
+<title>Toontown Planet </title>
+<h1>Welcome To Toontown Planet </h1>
+ <head>
+<style>
+
+body {
+    background-color: maroon;
+}
+h1 {
+    color: maroon;
+    margin-left: 40px;
+
+}
+</style>
+</head>
+  <link href="" rel="stylesheet">
+  <FONT FACE="modern, arial, veranda">Tip: You can go to the website by clicking the homepage Button
+
+ 
+<link href='http://fonts.googleapis.com/css?family=Slabo+27px|Crete+Round' rel='stylesheet' type='text/css'>
+<link href="http://tthrdev.atwebpages.com/stylesheet.css" rel="stylesheet">
+<link href="http://tthrdev.atwebpages.com/stylesheet.css" rel="stylesheet">
+<HTA:APPLICATION 
+     APPLICATIONNAME="Toontown Planet Launcher"
+     SCROLL="no"
+     SINGLEINSTANCE="no"
+     WINDOWSTATE="normal"
+	 
+
+>
+</head>
+
+<script language="VBScript">
+    Sub Window_onLoad
+      window.resizeTo 1080,540
+    End Sub
+    Sub Launcher
+        Dim objShell
+        set objShell = CreateObject ( "WScript.Shell" )
+        set sysenv = objShell.Environment ( "PROCESS" )
+	    sysenv("TTI_PLAYCOOKIE") = username.Value&":"&password.Value
+        sysenv("TTI_GAMESERVER") = "108.39.34.156 "
+        objShell.currentDirectory = objShell.currentDirectory&"\.."
+        objShell.Run("C:/Panda3D-1.9.0/python/ppython.exe -m toontown.toonbase.ToontownPlanetStart")
+        set objShell = Nothing
+        Me.Close
+    End Sub
+</script>
+<body>
+<center>
+Username: <input type="text" name="username" size=16>
+Password: <input type="password" name="password" size=32>
+Get ready to play Toontown Planet!!!
+        <div class="col-lg-12 text-center">
+	  <button name="run_button" onClick="Launcher" value="Go" class="btn btn-primary btn-success">Play</button>
+</html>
+
+</center>
+<br>
+<center>
+
+</center>
+
+<FONT FACE="modern, arial, veranda">You Can Report Bugs By Emailing Toontownplanet.help@gmail.com!</FONT>
+</body>
+</head>
+<FORM>
+<INPUT Type="BUTTON" VALUE="Home Page" ONCLICK="window.location.href='http://www.toontownplanet.weebly.com'">
+<INPUT Type="BUTTON" VALUE="Team" ONCLICK="window.location.href='http://www.toontownplanet.weebly.com/team.html'">
+<INPUT Type="BUTTON" VALUE="Upcoming Updates" ONCLICK="window.location.href='http://www.toontownplanet.weebly.com/upcoming-updates.html'"> 
+<INPUT Type="BUTTON" VALUE="Forums" ONCLICK="window.location.href='http://www.toontownplanet.weebly.com/-forums.html#/'"> 
+<INPUT Type="BUTTON" VALUE="Survey" ONCLICK="window.location.href='http://www.toontownplanet.weebly.com/survey.html'"> 
+</FORM>
+ 
+</FORM>
+
+
+
+
+
+
+
